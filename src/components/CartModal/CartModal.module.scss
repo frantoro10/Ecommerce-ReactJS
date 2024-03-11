@@ -1,0 +1,73 @@
+.modal {
+  position: absolute;
+  background: white;
+  width: 25%;
+  height: auto;
+  top: 1%;
+  right: 1%;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+ 
+}
+
+
+.modalContainer {
+  width: 100%;
+  min-height: 45em !important;
+  max-height: 45em;
+  padding: 1em;
+  overflow-y: scroll;
+  font-size: 0.9em;
+  
+}
+
+.modalProduct {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 2em 0em;
+  border-bottom: 0.1px solid rgb(200, 200, 200);
+  
+  
+}
+
+
+.modalImg {
+  width: 50%;
+  // border: 2px solid red;
+  margin-right: 0.5em;
+  padding: 0.3em;
+  
+  img {
+    width: 85%;
+    
+  }
+}
+
+.modalText {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  
+  span {
+    margin: 0.4em 0em;
+  }
+  
+}
+
+//  Responsive
+
+@media (min-width: 500px) and (max-width: 1000px)  {
+  .modal {
+    width: 60%;
+  }
+  
+}
+
+@media (max-width: 500px) {
+  .modal {
+    width: 95%;
+    padding: 0em;
+  }
+}

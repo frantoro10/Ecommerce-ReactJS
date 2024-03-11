@@ -1,0 +1,77 @@
+.faUserS {
+    margin: 0em 1em;
+    display: flex;
+        h5{
+            margin: 0em 0.4em;
+        }
+}
+
+.navbar {
+    background-color: red !important ;
+}
+
+.navLgContainer {
+    display: flex;
+    width: 100%;
+    font-size: 1.3em;
+    margin: 0.2em 0em;
+
+    span {
+        margin: 0em 0.3em;
+        list-style-type: none;
+    }
+    
+   a {
+    text-decoration: none;
+    color: white;
+   }
+   
+}
+
+.btnBurger {
+    
+    border: 1px solid rgb(116, 115, 115) !important;
+    color: rgb(34, 54, 205) !important;
+    background-color: #424143 !important;
+    margin: auto;
+}
+
+
+
+.modalSm {
+    
+    background-color: #424143 !important;
+    color: white !important;
+    
+}
+
+.navLiContainer {
+
+    ul{
+        
+        margin: 1.2em 0em;
+        li{
+            margin: 0.7em 0em;
+            font-size: 1.1em;
+            a{
+                text-decoration: none;
+                color: white !important;
+            }
+        }
+    }
+}
+
+
+
+.navBar {
+    background-color: rgba(6, 4, 4, 0.293);
+}
+
+.homeSm {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+

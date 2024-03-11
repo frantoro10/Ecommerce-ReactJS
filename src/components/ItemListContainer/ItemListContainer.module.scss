@@ -1,0 +1,69 @@
+
+
+.card {
+    
+    box-sizing: border-box !important; 
+    border: 1px solid #CDCDCD !important;
+    width: 48% !important;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: 0.3em;
+    min-height: 35vh !important;
+    font-size: 0.9em;
+    h3 {
+        font-size: 1.1em;
+    }
+    img {
+        border-bottom: 1px solid #CDCDCD !important;
+        height: 20vh;
+        object-fit: contain;
+    }
+    button {
+        
+        width: 100%;
+        font-size: 0.8em;
+        font-weight: 500;
+        
+    }
+    
+}
+
+.detailsContainer {
+    min-height: 8vh;
+
+    
+    div {
+        margin-bottom: 0.4em;
+        
+    }
+}
+
+// Breakpoints
+
+@media (min-width: 768px) {
+    .card {
+        width: 32% !important;
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+        margin-left: 0.4em;
+
+        img {
+            height: 25vh;
+        }
+        button {
+            width: 70%;
+            font-size: 1.1em;
+            
+        }
+        h3 {
+            font-size: 1.2em;
+            text-align: center;
+        }
+    }
+    .detailsContainer {
+        font-size: 1.1em;
+        min-height: 7vh;
+        text-align: center;
+        
+    }
+}

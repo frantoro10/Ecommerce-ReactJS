@@ -1,0 +1,29 @@
+.carouselContainer {
+    
+    background-color: rgb(255, 255, 255);
+
+}
+
+.productBox {
+    
+    background-color: white;
+    width: 95% !important;
+    padding: 1em;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 3px 1px 0 rgba(0, 0, 0, .12), 0 2px 2px 0 rgba(0, 0, 0, .14) !important;  
+    border: 0.5px solid rgb(206, 206, 206);
+    border-radius: 0.5em;
+    
+    
+    
+
+    //    border: 5px solid blue;
+    img {
+        width: 100%;
+
+
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+}
