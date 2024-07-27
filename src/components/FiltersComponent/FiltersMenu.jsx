@@ -105,11 +105,6 @@ const FiltersMenu = () => {
                     </ul>
                 </div>
 
-                <div>
-                    <h3>Precio</h3>
-                    <input type="range" min="0" max="1000" step="10" value="900" id="precio-slider" />
-                    <span id="precio-value">$50</span>
-                </div>
             </div>
 
             {/* Modal SM  */}
