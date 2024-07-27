@@ -25,14 +25,14 @@ const NavBar = () => {
       <Modal show={showModal} onHide={handleToggleModal} className={` mt-5 d-md-none`} >
         <div className={`${styles.modalSm}`}>
           <Modal.Header closeButton>
-            <Link to={"/"} className={`${styles.homeSm}`}><span>Go Home</span></Link>
+            <Link to={"/"} className={`${styles.homeSm}`}><span>Home</span></Link>
           </Modal.Header>
           <Modal.Body>
             <div className={`d-md-none ${styles.navLiContainer}`}>
               <h3>Categorias:</h3>
               <ul className={``}>
                 <li><Link to={"products"} className={``} >Productos</Link></li>
-                <li><span className={`text-white`}>Ofertas de la semana</span></li>
+                {/* <li><span className={`text-white`}>Ofertas de la semana</span></li> */}
                 <li><Link to={"category/procesadores"} className={``} >Procesadores</Link></li>
                 <li><Link to={"category/placas-de-video"} className={``} >Placas de video</Link></li>
                 <li><Link to={"category/memorias"} className={``} > Memorias ram </Link></li>
@@ -43,27 +43,28 @@ const NavBar = () => {
       </Modal>
 
       {/* Boton hamburguesa que abre modal para pantallas pequeñas */}
-      <Navbar expand="lg" className={`${styles.navBar}`}>
+      <Navbar expand="lg" >
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleToggleModal
         } className={`d-block d-md-none ${styles.btnBurger}`} />
 
         {/* NavBar pantallas grandes */}
+
         <Container  >
-          <div className={`${styles.navLgContainer} d-none d-md-block text-white `}>
-            <div>
-            <NavDropdown title="Categories" className={`${styles.navCategories } `}>
-              <ul className={`${styles.ulNavLg}`}>
-                <li><Link to={"category/procesadores"} className={`text-black`} >Procesadores</Link></li>
-                <li><Link to={"category/placas-de-video"} className={`text-black`} >Placas de video</Link></li>
-                <li><Link to={"category/memorias"} className={`text-black`} > Memorias ram </Link></li>
-              </ul>
-            </NavDropdown>
+          <div className={`${styles["lg-nav-container"]} d-none d-md-block text-white `}>
+            <div className="d-flex ">
+              <NavDropdown title="Categorias" className="me-4">
+                <ul>
+                  <li><Link to={"category/procesadores"} className={`text-black`} >Procesadores</Link></li>
+                  <li><Link to={"category/placas-de-video"} className={`text-black`} >Placas de video</Link></li>
+                  <li><Link to={"category/memorias"} className={`text-black`} > Memorias ram </Link></li>
+                </ul>
+              </NavDropdown>
+              <span>
+                <Link to={"products"}>Productos</Link>
+              </span>
+              {/* <span style={{ color: "white" }}>Ofertas de la semana
+            </span> */}
             </div>
-            <span>
-              <Link to={"products"}>Productos</Link>
-            </span>
-            <span style={{ color: "white" }}>Ofertas de la semanas
-            </span>
           </div>
         </Container>
       </Navbar>

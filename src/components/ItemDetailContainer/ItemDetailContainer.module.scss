@@ -1,44 +1,23 @@
 // itemdetails jsx 
 #detailsMainBox {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
 
-
 }
 
-.detailsBox {
-    display: flex;
-    box-sizing: border-box; 
-    flex-direction: row-reverse;
-    width: 85%;
-    margin-top: 1rem;
 
-
-
-}
-
-.gallery {
-    border: 100px solid black;
-}
 
 
 // Componente: "ItemDetailContainer - Price Box" 
 
 .priceBox {
-    box-sizing: border-box;
     padding: 1rem;
     margin-left: 1rem;
-    width: 40%;
-    height: auto;
-    max-width: 450px;
+    width: 100%;
     border-left: 1px solid rgb(197, 197, 197);
 
     span {
         font-size: 1.8rem;
-
     }
 }
 
@@ -70,4 +49,13 @@
 
 .carousel {
     display: flex;
+}
+
+
+// Breakpoints
+
+@media (max-width: 600px) {
+    .priceBox {
+        width: 100%;
+    }
 }

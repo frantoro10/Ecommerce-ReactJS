@@ -1,29 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import {useContext} from 'react'
-import {ProductsContext} from '../context/ProductsContext'
+import { useContext } from 'react'
+import { ProductsContext } from '../context/ProductsContext'
 import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
+import styles from './Category.module.scss'
 
 
 
 
 const Category = () => {
-  const {products} = useContext(ProductsContext)
-  const [displayedProducts,setDisplayedProducts] = useState([])
-  const [loading,setLoading] = useState (true);
+  const { products } = useContext(ProductsContext)
+  const [displayedProducts, setDisplayedProducts] = useState([])
+  const [loading, setLoading] = useState(true);
   const { categoryId } = useParams();
 
   useEffect(() => {
 
-        const dataFiltered = products.filter((item) => item.category === categoryId);
+    const dataFiltered = products.filter((item) => item.category === categoryId);
 
-        setDisplayedProducts(dataFiltered)
-        setLoading(false);
-        console.log(dataFiltered)
-    
+    setDisplayedProducts(dataFiltered)
+    setLoading(false);
+    console.log(dataFiltered)
+
   }, [categoryId], products);
 
-  return loading ? <div>Loading...</div> : <ItemListContainer productsData={displayedProducts} />;
+  return loading ? <div>Loading...</div> : (
+    <div className='container'>
+      <h2 className='text-center mt-3 mb-3'>Filtrando por Categoria:</h2>
+      <ItemListContainer productsData={displayedProducts}  />
+    </div>
+  )
 };
 
 export default Category

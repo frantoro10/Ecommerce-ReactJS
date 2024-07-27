@@ -26,7 +26,7 @@ const MainRouter = () => {
                 <Route path="/products" element={<Products />}/>
                 <Route path="/category/:categoryId" element={<Category />} />
                 <Route path="/item/:productId" element={<ItemDetails />} />
-                <Route path="/shoppingCart" element={<CartPage/>} />
+                {/* <Route path="/shoppingCart" element={<CartPage/>} /> */}
             </Routes>
         </Router>
     )

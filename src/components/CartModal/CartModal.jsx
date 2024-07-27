@@ -50,9 +50,7 @@ const CartModal = () => {
       </div>}
 
       <Modal isOpen={openModal}
-      className={`${styles.modal}`}  
-      >
-        <span className='border fs-4'> Carrito: </span>
+        className={`${styles.modal}`} >
         <div className={`${styles.modalContainer}`}>
           {cartProducts.length === 0 ? (<p>No hay productos en su carrito</p>) : (cartProducts.map((item) => {
 
@@ -75,13 +73,14 @@ const CartModal = () => {
 
           }))}
         </div>
-          <span className='fs-4'>
-            Total: ${priceCart()}
-          </span>
-          <div>
-            <button onClick={handleClose} style={{ margin: "1em 1em" }}> Volver </button>
-            <button><Link to={"/shoppingCart"}>Comprar</Link></button>
-          </div>
+        <span className='fs-4 ms-3'>
+          Total: ${priceCart()}
+        </span>
+        <div>
+          <button onClick={handleClose} style={{ margin: "1em 1em" }}> Volver </button>
+          <button>Comprar</button>
+          {/* <button><Link to={"/shoppingCart"}>Comprar</Link></button> */}
+        </div>
       </Modal>
 
     </>
@@ -89,25 +88,6 @@ const CartModal = () => {
 }
 
 export default CartModal
-
-
-// const { cartProducts, setCartProducts } = useContext(CartContext)
-// const { cartPrice, setCartPrice } = useContext(CartContext)
-
-
-
-
-
-
-// const priceCart = () => {
-//   let price = 0;
-//   cartProducts.forEach((item) => {
-//     price += item.price;
-//   });
-//   return (price + cartPrice);
-// };
-
-
 
 
 

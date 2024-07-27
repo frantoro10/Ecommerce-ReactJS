@@ -2,6 +2,8 @@ import React from 'react'
 import { useState, useEffect, useContext } from 'react'
 import { CartContext } from "../../context/CartContext"
 import { useParams } from 'react-router-dom'
+import styles from './ItemCount.module.scss'
+
 
 const ItemCount = ({ onCountChange }) => {
     const [count, setCount] = useState(1);
@@ -22,9 +24,9 @@ const ItemCount = ({ onCountChange }) => {
   
     return (
       <div>
-        <button onClick={handleRemoveProduct}>-</button>
+        <button onClick={handleRemoveProduct} className={`${styles["subtract-button"]}`}>-</button>
         {count}
-        <button onClick={handleAddProduct}>+</button>
+        <button onClick={handleAddProduct} className={`${styles["add-button"]}`} >+</button>
       </div>
     )
   }

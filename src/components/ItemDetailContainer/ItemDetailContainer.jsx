@@ -92,8 +92,9 @@ const ItemDetailContainer = () => {
         handleAddProduct(product);
         countAdd();
       }}>Agregar al Carrito</Button>
+      <div className={`mt-2`}>
       <ItemCount onCountChange={setSelectedCount}/>
-
+      </div>
     </div>
 
   )

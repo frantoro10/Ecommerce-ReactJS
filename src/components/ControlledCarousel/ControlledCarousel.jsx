@@ -13,21 +13,21 @@ function ControlledCarousel() {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect} className={styles.carouselBox}>
       <Carousel.Item className={styles.carouselItem} >
-        <img src="/keyboard-banner.webp" alt="asd" className={styles.carouselImg} />
+        <img src="/keyboard-banner.webp" alt="banner" className={styles.carouselImg} />
         {/* <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption> */}
       </Carousel.Item>
       <Carousel.Item className={styles.carouselItem} >
-      <img src="/smartphone-banner.jpg" alt="asd" className={styles.carouselImg} />
+      <img src="/smartphone-banner.jpg" alt="banner" className={styles.carouselImg} />
         {/* <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption> */}
       </Carousel.Item>
       <Carousel.Item className={styles.carouselItem} >
-      <img src="/tech-banner.jpeg" alt="asd" className={styles.carouselImg} />
+      <img src="/tech-banner.jpeg" alt="banner" className={styles.carouselImg} />
         {/* <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>

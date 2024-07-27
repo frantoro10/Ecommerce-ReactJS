@@ -1,0 +1,12 @@
+.gallery-container {
+    position: relative !important;
+}
+
+.gallery-wrapper {
+    z-index: 1 !important;
+}
+
+.image-gallery-slide .image-gallery-prev,
+.image-gallery-slide .image-gallery-next {
+    display: none; /* Oculta las flechas de navegación */
+}

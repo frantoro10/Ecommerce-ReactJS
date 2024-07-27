@@ -1,0 +1,25 @@
+
+button {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.add-button {
+    width: 1.6rem;
+    margin-left: 0.4em;
+}
+
+.subtract-button {
+    width: 1.6em;
+    margin-right: 0.4em;
+
+}
+
+.subtract-button:hover {
+    background-color: red;
+}
+
+.add-button:hover {
+   background-color: rgb(99, 150, 21);
+}

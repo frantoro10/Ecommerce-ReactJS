@@ -1,21 +1,17 @@
-.faUserS {
-    margin: 0em 1em;
-    display: flex;
-        h5{
-            margin: 0em 0.4em;
-        }
-}
+// .faUserS {
+//     margin: 0em 1em;
+//     display: flex;
+//         h5{
+//             margin: 0em 0.4em;
+//         }
+// }
 
-.navbar {
-    background-color: red !important ;
-}
 
-.navLgContainer {
+.lg-nav-container {
     display: flex;
     width: 100%;
     font-size: 1.3em;
     margin: 0.2em 0em;
-
     span {
         margin: 0em 0.3em;
         list-style-type: none;
@@ -28,11 +24,15 @@
    
 }
 
+.nav-categories {
+    border: 2px solid blue;
+}
+
 .btnBurger {
     
     border: 1px solid rgb(116, 115, 115) !important;
     color: rgb(34, 54, 205) !important;
-    background-color: #424143 !important;
+    background-color: #5c5a5e !important;
     margin: auto;
 }
 
@@ -62,10 +62,6 @@
 }
 
 
-
-.navBar {
-    background-color: rgba(6, 4, 4, 0.293);
-}
 
 .homeSm {
     list-style: none;

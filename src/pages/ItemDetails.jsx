@@ -16,17 +16,20 @@ const ItemDetails = () => {
 
  useEffect(() => {
   const currentProduct = products.find(item => item.id === productId)
-
   const productosSimilares = products.filter((item) => (item.category === currentProduct.category))
   setProductSimilar(productosSimilares);
   console.log(productSimilar)
   }, [productId, products])
 
   return (
-    <div id={styles.detailsMainBox}>
-      <div className={styles.detailsBox}>
-        <ItemDetailContainer/>
-        <ProductGallery />
+    <div id={styles.detailsMainBox} className={`container  `}>
+      <div className={` row mt-3 ${styles.detailsBox}  `}>
+        <div className={`col-sm-12 col-md-6`}>
+          <ProductGallery  />
+        </div>
+        <div className={` col-sm-12 col-md-6 mt-3 mb-3 mt-md-0 mb-md-0`}>
+          <ItemDetailContainer className={``}/>
+        </div>
       </div>
         <ProductDescription productId={productId}/>
         <div>
