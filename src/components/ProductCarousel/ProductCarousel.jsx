@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -10,8 +10,15 @@ import styles from './ProductCarousel.module.scss'
 import '../../styles.scss'
 
 const ProductCarousel = ({ products }) => {
-
   const navigate = useNavigate();
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    // Forzar actualización del slider después de que el componente se haya montado
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(0, true);
+    }
+  }, [products]);
 
   const settings = {
     dots: true,
@@ -39,20 +46,19 @@ const ProductCarousel = ({ products }) => {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 300,
         settings: {
-          initialSlide: 1,
-          slidesToShow: 1,
-          slidesToScroll: 1
+          initialSlide: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3
         }
       }
     ]
   };
 
   return (
-
-    <div className={`  ${styles.carouselContainer}`}>
-      <Slider {...settings} >
+    <div className={` ${styles.carouselContainer}`}>
+      <Slider ref={sliderRef} {...settings}>
         {products.map(product => (
           <div key={product.id} className={styles.productBox}>
             <img src={product.img} alt={product.title} />
@@ -60,13 +66,12 @@ const ProductCarousel = ({ products }) => {
             <p>{product.version}</p>
             <p className="p-price"> ${product.price}</p>
             <button onClick={() => navigate(`/item/${product.id}`)} style={{ marginBottom: "1em", borderRadius: "0.4em", backgroundColor: "#0d6efd", color: "white", padding: "0.5em" }}>
-              Ver mas
+              Ver más
             </button>
           </div>
         ))}
       </Slider>
     </div>
-
   );
 };
 

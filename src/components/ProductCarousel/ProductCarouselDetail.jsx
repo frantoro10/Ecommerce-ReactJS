@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -10,8 +10,15 @@ import styles from './ProductCarouselDetail.module.scss'
 import '../../styles.scss'
 
 const ProductCarouselDetail = ({ products }) => {
-
   const navigate = useNavigate();
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    // Forzar actualización del slider después de que el componente se haya montado
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(0, true);
+    }
+  }, [products]);
 
   const settings = {
     dots: true,
@@ -52,13 +59,13 @@ const ProductCarouselDetail = ({ products }) => {
   return (
     <div>
       <div className={styles.carouselContainer}>
-        <Slider {...settings} >
+        <Slider ref={sliderRef} {...settings}>
           {products.map(product => (
             <div key={product.id} className={styles.productBox} onClick={() => navigate(`/item/${product.id}`)}>
               <img src={product.img} alt={product.title} />
               <h3>{product.title}</h3>
               <p>{product.version}</p>
-              <p className="p-price"> ${product.price}</p>
+              <p className="p-price">${product.price}</p>
             </div>
           ))}
         </Slider>
