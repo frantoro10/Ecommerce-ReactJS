@@ -1,4 +1,4 @@
-# Front-End E-commerce (React)
+# Front-End Responsive E-commerce (React)
 
 English:
 
