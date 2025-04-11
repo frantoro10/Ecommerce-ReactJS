@@ -2,7 +2,7 @@
 
 # Hosted on Vercel, Link: https://ecommerce-react-js-umber.vercel.app/
 
-## Description:
+## 📌 Description:
 Responsive Application: React + Vite - CSS-SASS - Bootstrap - Firebase (Database)
 Application Objective: Create an Ecommerce with various functionalities. (Fake Ecommerce)
 
